@@ -16,9 +16,42 @@ h1,
 h2,
 h3,
 h4,
-h5,
 h6 {
 	font-weight: 500;
+}
+
+h1 {
+	font-size: 64px;
+	line-height: 75px;
+	margin-bottom: 25px;
+}
+
+h2 {
+	font-size: 48px;
+	line-height: 58px;
+}
+
+h3 {
+	font-size: 36px;
+}
+
+h4 {
+	font-size: 24px;
+	line-height: 29px;
+	margin-bottom: 20px;
+}
+
+h6 {
+	font-size: 18px;
+	line-height: 24px;
+	margin: 20px 0;
+}
+
+p {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	margin: 25px 0;
 }
 
 img {
@@ -31,161 +64,133 @@ button {
 	border: none;
 	background-color: #4b5092;
 	color: #fff;
-	font-weight: 100;
+	font-weight: 600;
 	font-size: 18px;
 	line-height: 22px;
 	width: 65%;
 	margin: auto;
 }
 
+hr {
+	width: 80%;
+	margin: auto;
+}
+
 .canvas {
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
 	max-width: 500px;
 	text-align: center;
 	margin: auto;
 }
 
-.heading {
-	font-size: 36px;
-	padding: 15px;
-}
-
-.desktop-menu {
-	display: none;
+.top-bar {
+	height: 75px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04),
+		0px 0px 1px rgba(0, 0, 0, 0.04);
 }
 
 .bold {
 	font-weight: 700 !important;
 }
 
-.container {
-	padding: 15px;
-	display: flex;
-	flex-direction: column;
+.desktop {
+	display: none;
 }
 
-.spacing-50 {
-	margin: 50px 0;
+.section-img {
+	margin-bottom: 20px;
 }
 
-.tag-line {
-	font-size: 64px;
-	line-height: 75px;
-	margin-top: 25px;
+.section-text,
+.section-img[id='trainer-img'] {
+	margin-bottom: 120px;
 }
 
-.subtext {
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 24px;
-	margin: 25px 0;
-}
-
-.subheading {
-	font-size: 48px;
-	line-height: 58px;
+.section-text[id='choose-txt'] {
+	padding: 10px;
+	padding-bottom: 40px;
+	background: #f2f8ff;
 }
 
 .left {
 	text-align: left;
 }
 
-.subtext.left {
-	margin: 0;
-}
-
-.subtext-container {
-	margin-top: 20px;
-	margin-bottom: 70px;
-}
-
-.container.trainer {
-	padding: 0;
-	background: linear-gradient(99.85deg, #bad5ff 0%, #6487bf 100%);
-}
-
-.subheading.bold {
-	margin-top: 50px;
+h2.left {
 	margin-bottom: 20px;
 }
 
-.trainer-top-container {
-	padding: 5px;
-}
-
-.experience {
-	font-size: 18px;
-	line-height: 24px;
-}
-
-.subtext-container.trainer {
-	margin-bottom: 0;
-}
-
-.subtext.trainer {
+p.left,
+.section[id='trainer'] > .section-text > p {
 	margin: 0;
 }
 
-.btn {
+.section[id='trainer'] {
+	background: linear-gradient(99.85deg, #bad5ff 0%, #6487bf 100%);
+	padding-top: 60px;
+	position: relative;
+}
+
+.section[id='trainer'] > .section-text {
+	margin-bottom: 0;
+}
+
+.secondary {
 	background-color: white;
 	color: #436baa;
 	margin-top: 30px;
 	margin-bottom: 70px;
 }
 
-#trainer-img {
+#trainer-img > img {
 	margin-bottom: -3px;
 }
 
-#exercise-image {
-	margin-top: 80px;
-	margin-bottom: 40px;
-}
-
-.subheading.exercise {
-	margin-bottom: 40px;
+#benefits > .section-text {
+	padding: 10px;
+	margin-bottom: 86px;
 }
 
 .benefit-block {
-	width: 100%;
 	height: 274px;
-	background: #e4f0ff;
 	border-radius: 30px;
-	margin-bottom: 10px;
-	padding-left: 30px;
+	margin-bottom: 15px;
+	padding-left: 40px;
 	padding-right: 80px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
+.benefit-block.blue {
+	background: #e4f0ff;
+}
+
+.benefit-block.purple {
+	background: rgba(114, 122, 239, 0.1);
+}
+
 .benefit-block:last-of-type {
 	margin-bottom: 40px;
 }
 
-.block-title {
-	font-size: 24px;
-	line-height: 29px;
-	margin-bottom: 20px;
+.brand {
+	margin-top: 40px;
 }
 
-.get-now-btn {
-	margin-bottom: 60px;
-}
-
-.contact-info {
+#up-to-date {
 	font-weight: 600;
-	font-size: 18px;
 	line-height: 28px;
 }
 
 #email-input {
+	width: 60%;
 	background: url('./icon-send.png') white center right no-repeat;
 	border: none;
 	border-radius: 5px;
-	margin: 20px 0;
+	margin-bottom: 20px;
 	padding: 10px;
 	font-weight: 400;
 }
@@ -196,10 +201,20 @@ button {
 	align-items: center;
 }
 
+.social-icon-container {
+	height: 32px;
+	width: 32px;
+	border-radius: 100%;
+	background: rgba(128, 173, 245, 0.1);
+	margin: 0 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .social-icon {
 	height: 15px;
 	width: 15px;
-	margin: 0 10px;
 }
 
 #copyright {
@@ -208,22 +223,13 @@ button {
 	line-height: 24px;
 }
 
+.section-text:last-of-type {
+	margin-bottom: 103px;
+}
+
 @media only screen and (min-width: 992px) {
 	li {
 		margin: 0 20px;
-	}
-
-	button {
-		width: 35%;
-	}
-
-	img {
-		width: 100%;
-	}
-
-	hr {
-		width: 90%;
-		margin: auto;
 	}
 
 	.canvas {
@@ -233,54 +239,40 @@ button {
 	.top-bar {
 		width: 80%;
 		margin: auto;
-		display: flex;
 		justify-content: space-between;
+		box-shadow: none;
 	}
 
-	.desktop-menu {
-		list-style: none;
+	.desktop {
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
+		list-style: none;
 	}
 
-	.container {
+	.section {
+		width: 80%;
+		display: flex;
 		flex-direction: row-reverse;
-		justify-content: center;
-		align-items: center;
-		text-align: left;
+		margin: auto;
 	}
 
-	.container-img,
-	.text {
-		width: 50%;
-	}
+	/* .section[id='workout'] {
+		padding-left: 135px;
+		padding-right: 64px;
+	} */
 
-	.container.choose {
+	.flip {
 		flex-direction: row;
 	}
 
-	.container.trainer {
-		width: 100vw;
+	.section-img,
+	.section-text {
+		width: 50%;
+		margin-bottom: 0;
 	}
 
-	.container-img.trainer {
-		display: flex;
-		justify-content: center;
-		align-items: baseline;
-		padding-top: 15px;
-	}
-
-	#trainer-img {
-		width: 450px;
-	}
-
-	.trainer-top-container.text {
+	.section-text[id='workout-txt'] {
 		text-align: left;
-		width: 30%;
-	}
-
-	.btn {
-		width: 45%;
 	}
 }
