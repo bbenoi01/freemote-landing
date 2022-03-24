@@ -72,7 +72,7 @@ button {
 }
 
 hr {
-	width: 80%;
+	width: 95%;
 	margin: auto;
 }
 
@@ -148,9 +148,12 @@ p.left,
 	margin-bottom: -3px;
 }
 
-#benefits > .section-text {
-	padding: 10px;
+.section[id='benefits'] {
 	margin-bottom: 86px;
+}
+
+.section[id='benefits'] > .section-text {
+	padding: 10px;
 }
 
 .benefit-block {
@@ -195,7 +198,7 @@ p.left,
 	font-weight: 400;
 }
 
-#social-container {
+.social-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -223,13 +226,40 @@ p.left,
 	line-height: 24px;
 }
 
-.section-text:last-of-type {
+.section[id='footer'] > .section-text {
 	margin-bottom: 103px;
 }
 
 @media only screen and (min-width: 992px) {
 	li {
 		margin: 0 20px;
+	}
+
+	h1 {
+		font-size: 50px;
+		line-height: unset;
+		margin: 0;
+	}
+
+	h2 {
+		font-size: 40px;
+		line-height: unset;
+	}
+
+	h4 {
+		font-size: 20px;
+		line-height: unset;
+		margin-bottom: 20px;
+	}
+
+	p {
+		font-size: 14px;
+		line-height: unset;
+	}
+
+	button {
+		width: 200px;
+		margin: 0;
 	}
 
 	.canvas {
@@ -250,6 +280,10 @@ p.left,
 		list-style: none;
 	}
 
+	.mobile {
+		display: none;
+	}
+
 	.section {
 		width: 80%;
 		display: flex;
@@ -257,10 +291,46 @@ p.left,
 		margin: auto;
 	}
 
-	/* .section[id='workout'] {
-		padding-left: 135px;
-		padding-right: 64px;
-	} */
+	.section[id='workout'] {
+		margin-top: 43px;
+		margin-bottom: 120px;
+	}
+
+	.section[id='choose'] {
+		margin-bottom: 66px;
+	}
+
+	.section[id='trainer'] {
+		width: 100%;
+		margin: 0;
+		margin-bottom: 150px;
+		padding: 0;
+		padding-top: 40px;
+	}
+
+	.section[id='benefits'] {
+		position: relative;
+		width: 100%;
+		flex-wrap: wrap;
+		margin-bottom: 120px;
+	}
+
+	.section[id='benefits'] > .top-bar {
+		width: 90%;
+		justify-content: space-between;
+		margin-bottom: 60px;
+	}
+
+	.desktop-container {
+		width: 95%;
+		display: flex;
+		flex-direction: row-reverse;
+		margin: auto;
+	}
+
+	.section[id='benefits'] > .section-text {
+		margin-bottom: 0;
+	}
 
 	.flip {
 		flex-direction: row;
@@ -268,11 +338,90 @@ p.left,
 
 	.section-img,
 	.section-text {
-		width: 50%;
 		margin-bottom: 0;
 	}
 
-	.section-text[id='workout-txt'] {
-		text-align: left;
+	.section-img {
+		width: 50%;
 	}
+
+	.section-img[id='trainer-img'] {
+		margin: 0;
+	}
+
+	.section-img[id='trainer-img'] > img {
+		width: 70%;
+	}
+
+	.section-img[id='benefits-img'] {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 30%;
+	}
+
+	.section-text {
+		width: 50%;
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.section-text[id='choose-txt'] {
+		padding: 50px;
+		border-radius: 50px;
+	}
+
+	.section-text[id='trainer-txt'] {
+		padding-right: 95px;
+	}
+
+	.section-text[id='benefits-txt'] {
+		flex-direction: row;
+		justify-content: center;
+		align-content: center;
+		flex-wrap: wrap;
+		width: 70%;
+	}
+
+	.benefit-block {
+		width: 310px;
+		height: 224px;
+		margin: 5px;
+	}
+
+	.benefit-block:last-of-type {
+		margin-bottom: 5px;
+	}
+
+	.section[id='footer'] {
+		width: 95%;
+		display: flex;
+		/* justify-content: space-between; */
+	}
+
+	.section[id='footer'] > .section-text {
+		width: 100%;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.brand {
+		flex: 4;
+	}
+
+	.w-50 {
+		width: 50%;
+	}
+
+	.mobile-container,
+	.up-to-date {
+		display: flex;
+		flex: 4;
+	}
+
+	/* .up-to-date {
+		justify-content: center;
+	} */
 }
